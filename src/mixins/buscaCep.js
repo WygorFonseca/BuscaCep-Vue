@@ -15,7 +15,7 @@ export default {
 
         const busca = server =>
           axios
-            .get(servers[server]) // Busca no servidor solicitado
+            .get(servers[server], { timeout: 2500 }) // Busca no servidor solicitado
             .then(({ data }) =>
               resolve({
                 uf: data.state || data.uf,
