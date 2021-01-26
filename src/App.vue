@@ -155,7 +155,7 @@ export default {
             this.address = data.address;
             this.district = data.district;
           })
-          .catch(message => { /* TRATA ERRO */ })
+          .catch(message => console.log(message))
           .then(() => (this.loadingZip = false));
       }
     }
